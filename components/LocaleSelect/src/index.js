@@ -1,9 +1,3 @@
-/**
- *
- * LocaleToggle
- *
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Select from '@material-ui/core/Select';
@@ -11,9 +5,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { FormattedMessage } from 'react-intl';
 
 function Toggle({ values = [], messages, onToggle, value }) {
-  const content = values.map(v => (
-    <MenuItem key={v} value={v}>
-      <FormattedMessage {...messages[v]} />
+  const content = values.map(val => (
+    <MenuItem key={val} value={val}>
+      <FormattedMessage {...messages[val]} />
     </MenuItem>
   ));
 
